@@ -1,20 +1,24 @@
+// define essa pagina como client component.
 "use client";
 
+// importa o useState, assim podemos criar e alterar conteudo do componente.
 import { useState } from "react";
 import OnOffButton2 from "@/components/OnOffButton2/OnOffButton2";
 
 export default function page () {
 
-    // declara uma variavel que nao sera atribuida no começo com o useState
+    // declara a variavel "ligado" e fala que ela vai começar com o valor "false" por padrão. 
     const [ligado, setLigado] = useState(false);
     
     return (
-        <main>
+        <main className={ligado ? "containerv" : "containerr"}>
+            {/*Chama o componente*/}
             <OnOffButton2
+                // Enviano para o componente uma props com o valor referente a variavel "ligado" 
                 ligado={ligado}
-                // recebe o clic e inverte o booleano de false para verdadeiro
+                // Envia a função de setligado, invertendo seu valor booleano. 
                 onClick={() => setLigado(!ligado)}
             />
         </main>
     );
-}
+}   

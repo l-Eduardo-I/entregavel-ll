@@ -1,22 +1,29 @@
-"use client";
+// Permite usar recursos do nevegador. Client Component.
+"use client"; 
 
 import "./OnOffButton.css";
-// importa o react e o useState que usamos para controlar estados do componente no casa ligado e desligado
+
+// importa o react e o useState que permite alterar o estado de um componente. 
 import React, { useState } from "react";
 
 export default function OnOffButton () {
 
-    // Cria as variaveis e seta eas como false padão.
+    // Cria as variaveis e seta elas como false padão.
     const [ligado, setLigado] = useState(false)
 
     return (
-        <button
-            //De acordo com a resposta do IF ele vinculo a uma classe
-            className={ligado ? "ligado" : "desligado"}
-            onClick={ () => setLigado(!ligado)}
-            >
-            {/*if que pergunta se o botão foi clicado ou não*/}
-            {ligado ? "Ligado" : "Desligado"} 
-        </button>
+        <div className={ligado ? "containerv" : "containerr"}> 
+            <button
+                //De acordo com o valor da variavel "ligado" vincula a uma classe
+                className={ligado ? "ligado" : "desligado"}
+
+                // quando o usuário clica nesso botão ele usa setLigado para trocar o comteudo da veriavel ligado, invertendo o valor booleano que esta salvo.  
+                onClick={ () => setLigado(!ligado)}
+                >
+
+                {/*operação terneria que vai comprar o que tem na variavel "Ligado" se for true = ligado, false = Desligado. */}
+                {ligado ? "Ligado" : "Desligado"} 
+            </button>
+        </div>
     );
 }

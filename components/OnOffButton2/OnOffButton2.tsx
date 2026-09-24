@@ -10,12 +10,14 @@ type OnOffButtonprops = {
 
 export default function OnOffButton2({ligado, onClick}: OnOffButtonprops) {
     return (
+        
         <button
             // se ligado for True é "Ligado" se for false é "Desligado" assim ele pega a class certa.
             className={ligado ? "Ligado" : "Desligado"}
+            
             onClick={onClick}
         >
-            {/*Ligado é VERDADEIRO ou FALSO  */}
+            {/*Operação ternaria para definir ligado e desligado, com base no valor da variavel "ligado.*/}
             {ligado ? "Ligado" : "Desligado"}
         </button>
     )

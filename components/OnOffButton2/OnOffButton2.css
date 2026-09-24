@@ -22,3 +22,21 @@
     color: white;
     margin: 10px;
 }
+
+.containerv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    background-color: rgb(7, 104, 7);
+}
+
+.containerr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    background-color: rgb(128, 0, 0);
+}

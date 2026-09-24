@@ -24,7 +24,7 @@ export default function FormNome() {
         } else if (nome.length > 20) {
             setMensagem("O nome precisa ter até 20 caracteres");
             setSucesso(false);
-        // ultima falidação do if se chagou aqui e pq cumpre os requisitos, envia a mensegem falando isso e um True de VERDADEIRO
+        // ultima validação do if, se chagou aqui e pq cumpre os requisitos, envia o setmensagem com a mensagem de sucesso e o setSucesso 
         } else {
             setMensagem("Formulário enviado com sucesso");
             setSucesso(true);
